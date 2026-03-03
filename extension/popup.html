@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- List View -->
+    <div id="listView">
+      <div class="header">
+        <h1>My Prompts</h1>
+        <button id="addBtn" class="btn primary small">+</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search prompts...">
+      </div>
+      <div id="promptList" class="prompt-list">
+        <div class="loading">Loading prompts...</div>
+      </div>
+      <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <!-- Detail/Edit View -->
+    <div id="detailView" class="hidden">
+      <div class="header">
+        <button id="backBtn" class="btn secondary small">← Back</button>
+        <span id="detailTitle" class="title-truncate">New Prompt</span>
+      </div>
+      <div class="editor-container">
+        <input type="text" id="promptName" placeholder="Prompt Name (e.g. coding-assistant)" class="name-input">
+        <textarea id="promptContent" placeholder="Enter your prompt here..."></textarea>
+      </div>
+      <div class="actions">
+        <button id="copyBtn" class="btn action">Copy</button>
+        <button id="saveBtn" class="btn primary">Save</button>
+        <button id="deleteBtn" class="btn danger">Delete</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
